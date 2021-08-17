@@ -1,0 +1,215 @@
+:root {
+  --color-main: #264653;
+  --color-main-2: #2a9d8f;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-width: 305px;
+  background-color: var(--color-main);
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-main-2);
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-title {
+  text-align: center;
+  animation: titleFrame 4s ease;
+}
+
+.resume-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 5px;
+  margin: 10px;
+  color: white;
+  background-color: var(--color-main-2);
+  animation: resumeFormFrames 1.5s ease;
+}
+
+.resume-question {
+  margin: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  animation: titleFrame 4s ease;
+}
+
+.resume-button {
+  padding: 8px;
+  font-size: 18px;
+  background-color: var(--color-main-2);
+  color: white;
+  outline: none;
+  border: 1px groove var(--color-main);
+  margin-top: 20px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.resume-button:hover {
+  background-color: var(--color-main);
+}
+
+/* ======== Style for form-control ========= */
+
+.resume-control-wrapper-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.resume-control-wrapper-group > * {
+  flex-basis: 1;
+  flex-grow: 1;
+}
+
+.resume-control-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--color-main);
+  border-radius: 3px;
+  background-color: white;
+  animation: resumeControlFrames 1.5s ease;
+}
+
+.resume-control {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 0 5px 10px;
+  margin-bottom: 3px;
+  border: none;
+  color: var(--color-main);
+  text-transform: capitalize;
+}
+
+.resume-control:focus {
+  outline: none;
+  border: none;
+}
+
+.resume-control[type="email"] {
+  text-transform: lowercase;
+}
+
+.resume-label {
+  color: var(--color-main);
+  padding: 5px 0 3px 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ========== Reason Style ============== */
+
+.resume-reason-wrapper {
+  display: flex;
+  animation: reasonFrames 2s ease;
+}
+
+.resume-reason {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  padding: 10px;
+  line-height: 20px;
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+  border-radius: 3px;
+}
+
+.resume-reason::selection {
+  background-color: var(--color-main);
+  color: white;
+}
+
+/*  ========= Footer Style =========== */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-main-2);
+  color: white;
+  padding: 10px;
+  gap: 1rem;
+}
+
+.fonter-links {
+  text-align: right;
+}
+
+.footer-link {
+  color: white;
+}
+
+.footer-link:visited {
+  color: white;
+}
+
+.footer-i4g {
+  width: 150px;
+}
+
+/* ===== Key Frames ===== */
+
+@keyframes titleFrame {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes resumeFormFrames {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  60% {
+    width: 35%;
+  }
+  80% {
+    width: 45%;
+  }
+  100% {
+    opacity: 1;
+    width: 34%;
+  }
+}
+
+@keyframes resumeControlFrames {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  78% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes reasonFrames {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
