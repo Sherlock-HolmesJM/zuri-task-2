@@ -7,6 +7,8 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   min-width: 305px;
   background-color: var(--color-main);
+  margin: 0;
+  padding: 0;
 }
 
 body::-webkit-scrollbar {
@@ -20,6 +22,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 305px;
 }
 
 .resume-title {
@@ -33,10 +36,9 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   padding: 20px;
   gap: 5px;
-  margin: 10px;
   color: white;
   background-color: var(--color-main-2);
-  animation: resumeFormFrames 1.5s ease;
+  animation: resumeFormFrames 1s ease;
 }
 
 .resume-question {
@@ -66,12 +68,12 @@ body::-webkit-scrollbar-thumb {
 
 .resume-control-wrapper-group {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 5px;
 }
 
 .resume-control-wrapper-group > * {
-  flex-basis: 1;
+  width: 200px;
   flex-grow: 1;
 }
 
@@ -82,7 +84,7 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid var(--color-main);
   border-radius: 3px;
   background-color: white;
-  animation: resumeControlFrames 1.5s ease;
+  animation: resumeControlFrames 2s ease;
 }
 
 .resume-control {
@@ -93,6 +95,7 @@ body::-webkit-scrollbar-thumb {
   border: none;
   color: var(--color-main);
   text-transform: capitalize;
+  background-color: white;
 }
 
 .resume-control:focus {
@@ -145,6 +148,7 @@ body::-webkit-scrollbar-thumb {
   color: white;
   padding: 10px;
   gap: 1rem;
+  margin-top: 20px;
 }
 
 .fonter-links {
@@ -177,30 +181,20 @@ body::-webkit-scrollbar-thumb {
 @keyframes resumeFormFrames {
   0% {
     opacity: 0;
-    width: 0;
-  }
-  60% {
-    width: 35%;
-  }
-  80% {
-    width: 40%;
   }
   100% {
     opacity: 1;
-    width: 34%;
   }
 }
 
 @keyframes resumeControlFrames {
   0% {
     opacity: 0;
-    width: 0;
   }
   20% {
     opacity: 0;
   }
-  78% {
-    width: 100%;
+  100% {
     opacity: 1;
   }
 }
