@@ -14,6 +14,7 @@ body {
 body::-webkit-scrollbar {
   width: 6px;
 }
+
 body::-webkit-scrollbar-thumb {
   background-color: var(--color-main-2);
 }
@@ -68,13 +69,11 @@ body::-webkit-scrollbar-thumb {
 
 .resume-control-wrapper-group {
   display: flex;
-  /* flex-wrap: wrap; */
   gap: 5px;
 }
 
 .resume-control-wrapper-group > * {
   width: 200px;
-  flex-grow: 1;
 }
 
 .resume-control-wrapper {
@@ -103,7 +102,8 @@ body::-webkit-scrollbar-thumb {
   border: none;
 }
 
-.resume-control[type="email"] {
+.resume-control[type="email"],
+.resume-control[type="date"] {
   text-transform: lowercase;
 }
 
