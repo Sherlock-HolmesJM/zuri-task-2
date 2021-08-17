@@ -183,7 +183,7 @@ body::-webkit-scrollbar-thumb {
     width: 35%;
   }
   80% {
-    width: 45%;
+    width: 40%;
   }
   100% {
     opacity: 1;
