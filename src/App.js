@@ -3,11 +3,7 @@ import Resume from "./components/resume";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <Resume />
-    </div>
-  );
+  return <Resume />;
 }
 
 export default App;

@@ -13,11 +13,15 @@ function Resume() {
   return (
     <Wrapper>
       <header>
-        <div>
-          <img src={zuriLogo} alt="zuri logo" />
-          <img src={i4gLogo} alt="i4g logo" className="header-i4g" />
+        <div className="header-logos">
+          <div>
+            <img src={zuriLogo} alt="zuri logo" />
+          </div>
+          <div className="header-i4g-div">
+            <img src={i4gLogo} alt="i4g logo" className="header-i4g" />
+          </div>
         </div>
-        <div>
+        <div className="header-links">
           <a href="https://internship.zuri.team/" className="header-link">
             Join the internship
           </a>
@@ -36,6 +40,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  min-width: 250px;
   background: linear-gradient(
     225deg,
     hsla(206, 97%, 15%, 1) 0%,
@@ -44,11 +50,27 @@ const Wrapper = styled.div`
 
   header {
     margin: 20px 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+
+  .header-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-logos > * {
+    margin: 15px;
   }
 
   .header-i4g {
+    display: inline-block;
     width: 150px;
-    margin-left: 30px;
+  }
+
+  .header-links {
+    text-align: center;
   }
 
   .header-link {
@@ -63,9 +85,30 @@ const Wrapper = styled.div`
 
   .resume {
     display: flex;
-    width: 800px;
+    width: 60%;
     border: 1px solid ${colors.primary};
     margin: 20px 0;
+  }
+
+  .resume > * {
+    flex-grow: 1;
+  }
+
+  @media (max-width: 1085px) {
+    .resume {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .resume {
+      width: 95%;
+    }
+  }
+  @media (max-width: 600px) {
+    .resume {
+      flex-wrap: wrap;
+    }
   }
 `;
 

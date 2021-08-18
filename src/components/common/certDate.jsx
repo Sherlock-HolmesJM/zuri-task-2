@@ -12,6 +12,7 @@ function CertDate({ dates }) {
 const Wrapper = styled.div`
   width: 130px;
   margin-right: 10px;
+  margin-bottom: 5px;
 `;
 
 export default CertDate;

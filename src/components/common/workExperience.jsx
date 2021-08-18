@@ -35,6 +35,10 @@ const Wrapper = styled.div`
   .ul {
     margin-top: 5px;
   }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export default WorkExperience;

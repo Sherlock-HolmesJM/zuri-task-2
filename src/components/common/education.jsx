@@ -29,6 +29,10 @@ const Wrapper = styled.div`
     font-weight: 600;
     margin-bottom: 8px;
   }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export default Education;
