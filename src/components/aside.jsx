@@ -36,6 +36,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   color: ${colors.white};
   background: ${colors.primary};
+  padding-bottom: 20px;
 
   .name-container {
     padding: 15px;

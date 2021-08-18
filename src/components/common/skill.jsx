@@ -11,7 +11,11 @@ function Skill({ title, rating }) {
     <Wrapper rating={rating}>
       <div className="title">{title}</div>
       <div className="progress-bar">
-        <div className="thumb"></div>
+        <div
+          className="thumb"
+          data-aos="flip-left"
+          data-aos-duration={1000}
+        ></div>
       </div>
       <div className="rating">{ratings[rate]}</div>
     </Wrapper>
@@ -25,16 +29,17 @@ const Wrapper = styled.div`
 
   .title,
   .rating {
-    font-size: 18px;
     font-weight: 400;
   }
 
   .title {
+    font-size: 18px;
     text-transform: capitalize;
     margin-bottom: 3px;
   }
 
   .rating {
+    font-size: 16px;
     text-align: right;
   }
 

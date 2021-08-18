@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { ToastContainer } from "react-toastify";
 
 import Aside from "./aside";
 import Main from "./main";
@@ -9,15 +10,28 @@ import i4gLogo from "../media/I4G-Logo-Color-Cropped.png";
 
 import { colors } from "../config";
 
+import printName from "../printName";
+
 function Resume() {
+  const [text, setText] = useState("Print my name");
+
+  const handleClick = () => {
+    printName();
+
+    setText("Name printed");
+
+    setTimeout(() => setText("Print name again"), 12000);
+  };
+
   return (
     <Wrapper>
+      <ToastContainer />
       <header>
         <div className="header-logos">
           <div>
             <img src={zuriLogo} alt="zuri logo" />
           </div>
-          <div className="header-i4g-div">
+          <div>
             <img src={i4gLogo} alt="i4g logo" className="header-i4g" />
           </div>
         </div>
@@ -25,12 +39,20 @@ function Resume() {
           <a href="https://internship.zuri.team/" className="header-link">
             Join the internship
           </a>
+          <em className="header-pipe">||</em>
+          <button className="header-printName" onClick={handleClick}>
+            {text}
+          </button>
         </div>
       </header>
 
       <div className="resume">
         <Aside />
         <Main />
+      </div>
+
+      <div className="footer">
+        <div>Developed by Ugochukwu Nkweke &copy; 2021</div>
       </div>
     </Wrapper>
   );
@@ -83,6 +105,34 @@ const Wrapper = styled.div`
     color: ${colors.white};
   }
 
+  .header-pipe {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 10px;
+    color: ${colors.white};
+  }
+
+  .header-printName {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 14px;
+    outline: none;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px dashed ${colors.primary};
+    background-color: ${colors.white};
+    color: ${colors.primary};
+    transition: 1s ease;
+  }
+
+  .header-printName:hover {
+    color: ${colors.white};
+    background-color: ${colors.primary};
+    border: 1px dashed ${colors.primary};
+    transition: 1s ease;
+  }
+
   .resume {
     display: flex;
     width: 60%;
@@ -92,6 +142,17 @@ const Wrapper = styled.div`
 
   .resume > * {
     flex-grow: 1;
+  }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 15px;
+    color: ${colors.white};
+    background-color: ${colors.primary};
   }
 
   @media (max-width: 1085px) {
