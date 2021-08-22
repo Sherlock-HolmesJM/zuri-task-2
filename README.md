@@ -2,7 +2,7 @@
 
 Created By Justice - Zuri/HND8 Internship
 
-![Resume Image](/src/media/resume.PNG)
+![Resume Image](/public/resume.PNG)
 
 [Link to Site](https://justice-app-form.netlify.app/)
 
