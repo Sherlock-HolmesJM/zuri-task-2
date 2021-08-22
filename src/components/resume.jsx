@@ -55,6 +55,12 @@ function Resume() {
 
       <div className="footer">
         <div>Developed by Ugochukwu Nkweke &copy; 2021</div>
+        <div>
+          Animation with{" "}
+          <a href="https://michalsnik.github.io/aos/">
+            AOS: Animate on Scroll Library
+          </a>
+        </div>
       </div>
     </Wrapper>
   );
@@ -149,12 +155,22 @@ const Wrapper = styled.div`
   .footer {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 15px;
     color: ${colors.white};
     background-color: ${colors.primary};
+    padding: 10px 0;
+
+    & > * {
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: inherit;
+    }
   }
 
   @media (max-width: 1085px) {

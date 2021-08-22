@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+import Projects from "./projects";
 import Certification from "./common/certification";
+import SubHeader from "./common/subSection";
 
 import { colors } from "../config";
 
@@ -27,9 +29,7 @@ function Content() {
         focused demeanor.
       </div>
 
-      <Section data-aos="progress" data-aos-duration={1000}>
-        Work Experience
-      </Section>
+      <SubHeader title="Work Experience" />
 
       <Certification
         title="FrontEnd Web Development"
@@ -38,9 +38,7 @@ function Content() {
         content={contents}
       />
 
-      <Section data-aos="progress" data-aos-duration={1000}>
-        Education
-      </Section>
+      <SubHeader title="Education" />
 
       <Certification
         title="Bachelor of Computer Science and Education: Computer Education"
@@ -48,27 +46,20 @@ function Content() {
         dates={{ start: "2016-11", end: "Current" }}
       />
 
-      <Section data-aos="progress" data-aos-duration={1000}>
-        Certification
-      </Section>
+      <SubHeader title="Certification" />
 
       <Certification
         title="Internship: Frontend Web Development"
         location="Zuri - Nigeria"
         dates={{ start: "2021-08", end: "Current" }}
       />
+
+      <SubHeader title="Projects" />
+
+      <Projects />
     </Wrapper>
   );
 }
-
-const Section = styled.div`
-  font-size: 20px;
-  font-weight: 700;
-  padding: 10px 0;
-  margin: 5px 20px;
-  border-top: 1px solid ${colors.primary};
-  border-bottom: 1px solid ${colors.primary};
-`;
 
 const Wrapper = styled.div`
   color: ${colors.primary};
@@ -78,15 +69,6 @@ const Wrapper = styled.div`
     padding: 25px;
     text-align: justify;
     text-justify: auto;
-  }
-
-  [data-aos="progress"] {
-    width: 0;
-    transition-property: width;
-
-    &.aos-animate {
-      width: 92%;
-    }
   }
 `;
 
