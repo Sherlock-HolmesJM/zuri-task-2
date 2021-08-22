@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import styled from "styled-components";
 
@@ -13,11 +14,13 @@ function Skill({ title, rating }) {
       <div className="progress-bar">
         <div
           className="thumb"
-          data-aos="flip-left"
+          data-aos="thumb-progress"
           data-aos-duration={1000}
         ></div>
       </div>
-      <div className="rating">{ratings[rate]}</div>
+      <div className="rating" data-aos="zoom-in-left" data-aos-duration={1000}>
+        {ratings[rate]}
+      </div>
     </Wrapper>
   );
 }
@@ -34,7 +37,6 @@ const Wrapper = styled.div`
 
   .title {
     font-size: 18px;
-    text-transform: capitalize;
     margin-bottom: 3px;
   }
 
@@ -54,9 +56,23 @@ const Wrapper = styled.div`
 
   .thumb {
     position: absolute;
-    top: 1px;
+    top: -1px;
     background: ${colors.white};
     width: ${(props) => `${props.rating * 20}%`};
+    border: 1px solid white;
+  }
+
+  /* ==== Custom aos animations ==== */
+
+  [data-aos="thumb-progress"] {
+    width: 0;
+    background-color: ${colors.primary};
+    transition-property: width, background-color;
+
+    &.aos-animate {
+      width: ${(props) => `${props.rating * 20}%`};
+      background: ${colors.primary};
+    }
   }
 `;
 

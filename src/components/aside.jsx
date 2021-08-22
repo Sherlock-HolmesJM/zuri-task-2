@@ -20,13 +20,20 @@ function Aside() {
       <Contact title="phone" content="0903 049 8410" />
       <Contact title="email" content="sherllyj191@gmail.com" />
 
-      <div className="caption">Skills</div>
+      <div className="caption">Programming</div>
 
       <Skill title="JavaScript" rating={4} />
       <Skill title="React" rating={4} />
       <Skill title="HTML5" rating={4} />
       <Skill title="CSS3" rating={4} />
+      <Skill title="NodeJs" rating={3} />
+      <Skill title="TypeScript" rating={3} />
       <Skill title="Firebase" rating={3} />
+      <Skill title="Animation" rating={3} />
+
+      <div className="caption">Skills</div>
+
+      <Skill title="Communication" rating={3} />
     </Wrapper>
   );
 }

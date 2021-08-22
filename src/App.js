@@ -5,7 +5,9 @@ import Resume from "./components/resume";
 import "./App.css";
 
 function App() {
-  AOS.init();
+  AOS.init({
+    once: true,
+  });
 
   return <Resume />;
 }

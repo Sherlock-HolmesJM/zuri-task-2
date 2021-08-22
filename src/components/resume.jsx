@@ -1,9 +1,10 @@
+// @ts-nocheck
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ToastContainer } from "react-toastify";
 
 import Aside from "./aside";
-import Main from "./main";
+import Content from "./main";
 
 import zuriLogo from "../media/zuri_internship.svg";
 import i4gLogo from "../media/I4G-Logo-Color-Cropped.png";
@@ -20,7 +21,7 @@ function Resume() {
 
     setText("Name printed");
 
-    setTimeout(() => setText("Print name again"), 12000);
+    setTimeout(() => setText("Print name again"), 6000);
   };
 
   return (
@@ -35,6 +36,7 @@ function Resume() {
             <img src={i4gLogo} alt="i4g logo" className="header-i4g" />
           </div>
         </div>
+
         <div className="header-links">
           <a href="https://internship.zuri.team/" className="header-link">
             Join the internship
@@ -48,7 +50,7 @@ function Resume() {
 
       <div className="resume">
         <Aside />
-        <Main />
+        <Content />
       </div>
 
       <div className="footer">
@@ -80,6 +82,8 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border-bottom: 10px groove ${colors.primary};
+    margin-bottom: 10px;
   }
 
   .header-logos > * {
@@ -120,17 +124,15 @@ const Wrapper = styled.div`
     border: none;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: 1px dashed ${colors.primary};
-    background-color: ${colors.white};
-    color: ${colors.primary};
-    transition: 1s ease;
+    border: 1px dashed gray;
+    color: ${colors.white};
+    background-color: ${colors.primary};
+    transition: 0.4s ease;
   }
 
   .header-printName:hover {
-    color: ${colors.white};
-    background-color: ${colors.primary};
-    border: 1px dashed ${colors.primary};
-    transition: 1s ease;
+    border: 1px dashed ${colors.white};
+    transition: 0.4s ease;
   }
 
   .resume {
