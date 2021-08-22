@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   AOS.init({
-    once: true,
+    once: false,
   });
 
   return <Resume />;
