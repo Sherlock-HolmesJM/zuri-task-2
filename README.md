@@ -2,7 +2,7 @@
 
 ## By Justice - Zuri/I4G Internship
 
-![Resume Image](/src/media/resume.png)
+![Resume Image](/src/media/resume.PNG)
 
 [Link to Site](https://justice-app-form.netlify.app/)
 
