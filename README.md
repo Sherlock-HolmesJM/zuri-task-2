@@ -1,6 +1,6 @@
 # Resume Web App
 
-## By Justice - Zuri/I4G Internship
+Created By Justice - Zuri/HND8 Internship
 
 ![Resume Image](/src/media/resume.PNG)
 
