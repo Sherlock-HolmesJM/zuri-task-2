@@ -62,8 +62,10 @@ function Content() {
 }
 
 const Wrapper = styled.div`
-  color: ${colors.primary};
+  color: ${colors.secondary};
   background: ${colors.white};
+  font-size: 16px;
+  font-weight: 500;
 
   .summary {
     padding: 25px;

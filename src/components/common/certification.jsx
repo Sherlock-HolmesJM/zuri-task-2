@@ -8,7 +8,7 @@ function Certification({
   dates = undefined,
 }) {
   return (
-    <Wrapper data-aos="fade-in" data-aos-duration={1000}>
+    <Wrapper data-aos="fade-in" data-aos-duration={1000} data-aos-once={true}>
       <div className="dates">
         {dates && dates.start} {dates && "-"} {dates && dates.end}
       </div>

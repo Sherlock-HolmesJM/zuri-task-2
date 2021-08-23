@@ -88,12 +88,13 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-bottom: 10px groove ${colors.primary};
+    border-bottom: 5px groove ${colors.primary};
     margin-bottom: 10px;
   }
 
   .header-logos > * {
     margin: 15px;
+    margin-bottom: 10px;
   }
 
   .header-i4g {
@@ -105,6 +106,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
   }
 
   .header-link {
@@ -165,7 +167,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     padding: 10px;
     color: ${colors.secondary};
@@ -192,6 +194,7 @@ const Wrapper = styled.div`
       width: 95%;
     }
   }
+
   @media (max-width: 600px) {
     .resume {
       flex-wrap: wrap;
