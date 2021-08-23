@@ -111,7 +111,7 @@ const Wrapper = styled.div`
 
   .header-link {
     display: block;
-    color: ${colors.white};
+    color: ${colors.secondary};
     font-size: 20px;
     font-weight: 500;
   }
