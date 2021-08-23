@@ -45,6 +45,10 @@ const Wrapper = styled.div`
 
   @media (max-width: 700px) {
     flex-direction: column;
+
+    .dates {
+      width: 100%;
+    }
   }
 `;
 

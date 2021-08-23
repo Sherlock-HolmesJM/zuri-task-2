@@ -3,8 +3,15 @@ import styled from "styled-components";
 
 function Projects() {
   const list = [
-    "Project Manager: current project for my school Workshop - University of Uyo",
-    "My first Portfolio with React, GSAP and Framer Motion",
+    {
+      description:
+        "Project Manager: current project for my school Workshop - University of Uyo",
+      link: "https://p-manager.netlify.app/projects",
+    },
+    {
+      description: "My first Portfolio with React, GSAP and Framer Motion",
+      link: "https://justiz47.netlify.app/",
+    },
   ];
 
   return (
@@ -13,14 +20,14 @@ function Projects() {
       <div className="content">
         <ul>
           {list.map((item) => (
-            <li key={item}>
+            <li key={item.description}>
               <a
                 className="project-link"
                 target="_blank"
                 rel="noreferrer"
-                href="https://p-manager.netlify.app/projects"
+                href={item.link}
               >
-                {item}
+                {item.description}
               </a>
             </li>
           ))}
@@ -47,6 +54,10 @@ const Wrapper = styled.div`
 
   @media (max-width: 700px) {
     flex-direction: column;
+
+    .aside {
+      width: 100%;
+    }
   }
 `;
 
