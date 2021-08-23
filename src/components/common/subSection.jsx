@@ -30,14 +30,15 @@ const Wrapper = styled.div`
   padding: 10px 0;
   margin: 5px 20px;
 
+  .section-text {
+    margin: 10px 0;
+  }
+
   .section-child {
     position: absolute;
     right: 1px;
-    border: 1px solid ${colors.primary};
-  }
-
-  .section-text {
-    margin: 10px 0;
+    height: 1px;
+    background-color: ${colors.primary};
   }
 
   &:first-child {

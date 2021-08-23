@@ -73,7 +73,7 @@ const Wrapper = styled.div`
   width: 100%;
   min-width: 250px;
   background: linear-gradient(
-    225deg,
+    300deg,
     hsla(206, 97%, 15%, 1) 0%,
     hsla(0, 0%, 100%, 1) 100%
   );
@@ -102,27 +102,32 @@ const Wrapper = styled.div`
   }
 
   .header-links {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .header-link {
+    display: block;
     color: ${colors.white};
     font-size: 20px;
     font-weight: 500;
   }
 
   .header-link:visited {
-    color: ${colors.white};
+    color: ${colors.secondary};
   }
 
   .header-pipe {
+    display: block;
     font-size: 30px;
     font-weight: 600;
     margin: 0 10px;
-    color: ${colors.white};
+    color: ${colors.secondary};
   }
 
   .header-printName {
+    display: block;
     font-size: 16px;
     font-weight: 600;
     padding: 10px 14px;
@@ -133,6 +138,7 @@ const Wrapper = styled.div`
     border: 1px dashed gray;
     color: ${colors.white};
     background-color: ${colors.primary};
+    width: 150px;
     transition: 0.4s ease;
   }
 
@@ -153,16 +159,18 @@ const Wrapper = styled.div`
   }
 
   .footer {
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    font-size: 15px;
-    color: ${colors.white};
-    background-color: ${colors.primary};
-    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    color: ${colors.secondary};
+    background-color: ${colors.white};
+    height: 100px;
 
     & > * {
       margin-bottom: 5px;
@@ -189,6 +197,21 @@ const Wrapper = styled.div`
       flex-wrap: wrap;
     }
   }
+
+  @media (max-width: 425px) {
+    .header-links {
+      flex-direction: column;
+    }
+
+    .header-pipe {
+      display: none;
+    }
+
+    .header-printName {
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+  } ;
 `;
 
 export default Resume;

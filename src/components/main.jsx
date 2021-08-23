@@ -41,7 +41,7 @@ function Content() {
       <SubHeader title="Education" />
 
       <Certification
-        title="Bachelor of Computer Science and Education: Computer Education"
+        title="Bachelor of Science & Education: Computer Education"
         location="University of Uyo - Uyo, Nigeria"
         dates={{ start: "2016-11", end: "Current" }}
       />

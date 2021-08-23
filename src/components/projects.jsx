@@ -13,7 +13,7 @@ function Projects() {
       <div className="content">
         <ul>
           {list.map((item) => (
-            <li>
+            <li key={item}>
               <a
                 className="project-link"
                 target="_blank"
@@ -32,6 +32,7 @@ function Projects() {
 
 const Wrapper = styled.div`
   display: flex;
+  padding: 0 20px 20px 20px;
 
   .aside {
     width: 100px;
@@ -42,6 +43,10 @@ const Wrapper = styled.div`
 
   .project-link {
     color: inherit;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
   }
 `;
 
