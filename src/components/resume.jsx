@@ -13,15 +13,17 @@ import { colors } from "../config";
 
 import printName from "../printName";
 
-function Resume() {
-  const [text, setText] = useState("Print my name");
+const initialText = "Print my name";
 
-  const handleClick = () => {
+function Resume() {
+  const [text, setText] = useState(initialText);
+
+  const handlePrint = () => {
     printName();
 
     setText("Name printed");
 
-    setTimeout(() => setText("Print name again"), 6000);
+    setTimeout(() => setText(initialText), 2000);
   };
 
   return (
@@ -42,7 +44,7 @@ function Resume() {
             Join the internship
           </a>
           <em className="header-pipe">||</em>
-          <button className="header-printName" onClick={handleClick}>
+          <button className="header-printName" onClick={handlePrint}>
             {text}
           </button>
         </div>
